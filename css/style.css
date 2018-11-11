@@ -1,0 +1,270 @@
+/* GERAL */
+
+body{
+	font-family: 'Prompt', sans-serif !important;
+	padding: 121px 10px 0;
+	margin: 0;
+}
+
+.container{
+	margin: 0 auto;
+}
+
+.titulo{
+	display: flex;
+	justify-content: center;
+}
+
+.titulo h1{
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color: #00d8f0;
+	padding: 5px;
+	width: 500px;
+	text-align: center;
+}
+
+.clear{
+	clear: both;
+}
+
+
+/* HEADER */
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2000;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	padding: 15px 15px;	
+}
+
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.menu ul li a{
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+}
+
+.menu ul li a::after{
+	content: "";
+	display: table;
+	width: 0;
+	height: 4px;
+	background-color: #00d8f0;
+	transition: .5s;
+}
+
+.menu ul li a:hover::after{
+	width: 100%;	
+}
+
+#btn-menu .fa{
+	font-size: 2rem;
+	color: #00d8f0;
+}
+
+#menu-mobile{
+	position: fixed;
+	top: 0;
+	left: -200px;
+	background-color: #1092a0;
+	z-index: 3000;
+	padding: 30px;
+	width: 130px;
+	height: 100%;
+	transition: 0.5s;
+}
+
+#menu-mobile h2{
+	margin: 0;
+}
+
+#menu-mobile #btn-close{
+	position: absolute;
+	top: 38px;
+	right: 20px;
+	z-index: 4000;
+}
+
+#menu-mobile ul{
+	margin: 0;
+	padding: 0;
+}
+
+#menu-mobile ul li{
+	list-style: none;
+	padding: 10px 0;
+}
+
+#menu-mobile ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
+}
+
+#menu-mobile img{
+	position: absolute;
+    bottom: 80px;
+    max-width: 130px;
+}
+
+.openMenu{
+	left: 0 !important;
+}
+
+/* SERVICOS */
+
+.servicos p{
+	padding: 40px 15px;
+	margin: 0;
+}
+
+.servicos img{
+	width: 100%;
+	display: block;
+}
+
+
+/* JOBS */
+.link-jobs{
+	width: 33.333%;
+	float: left;
+	position: relative;
+}
+
+.link-jobs img{
+	width: 100%;
+	display: block;
+}
+
+
+/* CONTATO */
+
+.contato{
+	padding: 40px 0;
+}
+
+.contato .form{	
+	background-color: #000;
+	padding: 15px;	
+	margin: 40px auto;		
+}
+
+.contato .form input, .contato .form textarea {
+	border-radius: 0;
+	border: none;
+	width: 100%;
+	text-indent: 15px;	
+	font-family: 'Prompt', sans-serif;
+}
+
+.contato .form input{
+	height: 40px;
+	margin-bottom: 15px;
+}
+
+.contato .form textarea{
+	height: 100px;
+	padding: 15px 0;	
+}
+
+.contato .form button{
+	border-radius: 0;
+	background-color: #00d8f0;
+	color: #000;
+	border: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 10px;	
+	margin: 15px 0 0;
+}
+
+
+/* FOOTER */
+
+footer .container{
+	background-color: #00d8f0;	
+}
+
+.footer{
+	padding: 45px 15px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.footer .social a{
+	color: #000;
+}
+.footer .social a:hover{
+	color: #000;
+}
+.footer .social{
+	text-align: right;
+	font-size: 2.5rem;
+}
+
+
+/* MEDIA QUERIES PARA TORNAR RESPONSIVO */
+
+/* DESKTOP  */
+@media (min-width: 1200px) { 
+	.container{
+		width: 1170px
+	}
+}
+
+/* LAPTOP */
+@media (min-width: 992px) { 
+	.contato .form{
+		max-width: 550px;
+	}
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+	.footer{
+		padding: 15px;
+		display: block;
+		text-align: center;
+	}
+
+	.footer .social{
+		text-align: center;
+	}
+	
+}
+
+@media (min-width: 651px){
+	#btn-menu{
+		display: none;
+	}
+}
+
+/* CELULAR */
+@media (max-width: 650px) {
+	.menu{
+		display: none;
+	}
+
+	.link-jobs{
+		width: 100%;
+	}
+
+	
+}
